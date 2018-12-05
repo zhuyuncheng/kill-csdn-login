@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "kill-csdn-login",
+  "version": "1.0.0",
+  "description": "__MSG_pluginDesc__",
+  "icons": {
+    "16": "img/sds.png",
+    "48": "img/sds.png",
+    "128": "img/sds.png"
+  },
+  "background": {
+    "scripts": []
+  },
+  "browser_action": {
+    "default_icon": "img/sds.png",
+    "default_title": "关掉CSND讨厌的登录"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://blog.csdn.net/**"
+      ],
+      "js": [
+        "util/jquery.js",
+        "js/content_scripts.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "homepage_url": "http://zhuyuncheng.top",
+  "default_locale": "zh_CN"
+}
