@@ -17,7 +17,6 @@ chrome.webRequest.onBeforeRequest.addListener(
    */
   function (details) {
     if (details.url.match(/check\-adblock/)) {
-      details.url = ""
       return { cancel: true }
     }
   },
